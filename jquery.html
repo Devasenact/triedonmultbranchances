@@ -1,0 +1,161 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style_theme.css">
+</head>
+<style type="text/css">
+    .form-control {
+        border-radius: 0px ! important;
+    }
+
+    .input-group-addon {
+        border-radius: 0px ! important;
+        width: 50%;
+        line-height: 1.5;
+    }
+
+    .checkbox.check-primary input[type=checkbox]:checked + label:before {
+        border-color: #4a90e2;
+    }
+
+    .checkbox label::after {
+        left: 2.5px;
+        top: 1px;
+    }
+
+    .disabled {
+        cursor: not-allowed;
+    }
+</style>
+
+ <app-header></app-header>
+<div class="page-container bg_spl">
+    <div class="page-content-wrapper">
+        <!-- <div class="container no-padding bg_lblack padding-name text-white f-w-600 fs-13">{{client_main_info.name}}</div> -->
+        <!-- <div class="container no-padding bg_dblack padding-name text-white f-w-600 fs-13 vertical-center">Hello {{client_main_info.name}}! Your Trial -->
+        <!-- expires in 30 days -->
+        <!-- </div> -->
+        <!-- <div class="header"> -->
+            <!-- <div class="container relative"> -->
+                <!-- <img src="https://mytutoring.co/assets/images/MT.jpg" alt="myTutoring" class="pull-left getstartedLogo"> -->
+            <!-- </div> -->
+        <!-- </div> --> 
+        <div class="container vertical-center p-t-100 bg_spl" style="overflow-x: hidden;">
+            <!-- <h3 class="text-center m-b-5" style="font-weight:600;font-size:17px;">Step 2: Set Up Your Website</h3> -->
+            <!-- <p class="fs-16 f-w-400 text-center m-t-10">Let's choose the subdomain and create the website landing page</p> -->
+
+        </div>
+
+        <div class="container vertical-center p-t-40">
+            <!-- <div class="panel panel_shadow padding-10 full-width"> -->
+            <h5 class="text-center user_panel_head pull-left full-width no-margin padding-content fs-14">Website Themes</h5>
+            <span class="text-black fs-14 about_2">Choose a website theme that suits best to your tutoring style, customize it and you are good to go.</span>
+
+            <div class="col-sm-12 col-md-12 col-xs-12 m-t-50 m-b-100 vertical-center mobNoPadding"
+                 ng-if="client_info.nature_of_business=='individual_tutor'">
+             <div ng-if="client_info.theme_type == 1">
+                <img src="assets/img/individual.png" height="200px" width="352px" class="pull-right themeImg">
+                <div class="img-overlay themeImgOverlay">
+                    <div class="row">
+                        <div class="col-xs-6 col-md-6 col-sm-6 p-t-10 p-b-10" style="border-right:1px solid #817f7f;">
+                            <button href="" ng-click="goToTutorTheme('preview',1)"
+                                    class="text-white text-center fs-12 f-w-600 p-l-50 btn-t"><img
+                                    src="assets/img/preview-icn@3x.png"
+                                    height="12px" class="p-r-5"
+                                    style="margin-top:-2px;">Preview
+                            </button>
+                        </div>
+                        <div class="col-xs-6 col-md-6 col-sm-6 p-t-10 p-b-10">
+                            <button href="" ng-click="goToTutorTheme('edit')"
+                                    class="text-white text-center fs-12 f-w-600 p-l-50 btn-t"><img
+                                    src="assets/img/edit-icn@3x.png"
+                                    height="12px" class="p-r-5"
+                                    style="margin-top:-2px;">Edit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div ng-if="client_info.theme_type == 1 && 2">
+                <img src="assets/img/individual.png" height="200px" width="352px" class="pull-right themeImg">
+                <div class="img-overlay themeImgOverlay">
+                    <div class="row">
+                        <div class="col-xs-6 col-md-6 col-sm-6 p-t-10 p-b-10" style="border-right:1px solid #817f7f;">
+                            <button href="" ng-click="goToTutorTheme('preview',2)"
+                                    class="text-white text-center fs-12 f-w-600 p-l-50 btn-t"><img
+                                    src="assets/img/preview-icn@3x.png"
+                                    height="12px" class="p-r-5"
+                                    style="margin-top:-2px;">Preview
+                            </button>
+                        </div>
+                        <div class="col-xs-6 col-md-6 col-sm-6 p-t-10 p-b-10">
+                            <button href="" ng-click="goToTutorTheme('edit')"
+                                    class="text-white text-center fs-12 f-w-600 p-l-50 btn-t"><img
+                                    src="assets/img/edit-icn@3x.png"
+                                    height="12px" class="p-r-5"
+                                    style="margin-top:-2px;">Edit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-xs-12 m-b-100 m-t-50 vertical-center mobNoPadding"
+                 ng-if="client_info.nature_of_business=='tutoring_institute'">
+                <img src="assets/img/individual.png" height="200px" width="352px" class="pull-right themeImg">
+                <div class="img-overlay themeImgOverlay">
+                    <div class="row">
+                        <div class="col-xs-6 col-md-6 col-sm-6 p-t-10 p-b-10" style="border-right:1px solid #817f7f;">
+                            <button ng-click="goToTutoringInstituteTheme('preview')"
+                                    class="text-white text-center fs-12 f-w-600 p-l-50 btn-t"><img
+                                    src="assets/img/preview-icn@3x.png"
+                                    height="12px" class="p-r-5"
+                                    style="margin-top:-2px;">Preview
+                            </button>
+                        </div>
+                        <div class="col-xs-6 col-md-6 col-sm-6 p-t-10 p-b-10">
+                            <button href="" ng-click="goToTutoringInstituteTheme('edit')"
+                                    class="text-white text-center fs-12 f-w-600 p-l-50 btn-t"><img
+                                    src="assets/img/edit-icn@3x.png"
+                                    height="12px" class="p-r-5"
+                                    style="margin-top:-2px;">Edit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3 p-r-5 p-l-5 mobFullWidth">
+            <div class="panel panel_shadow padding-10 pull-left full-width websiteLinkHeight" ng-cloak>
+              <h5 class="border_head user_panel_head pull-left full-width no-margin">
+                <span class="pull-left"><i class="fa fa-info-circle"></i>May I Help You? </span>
+              </h5>
+              <div class="clearfix"></div>
+              <div class="row admin_data m-t-10">
+                <div class="col-md-12 col-sm-6 col-xs-12 p-l-20 p-r-20">
+                  <div class="m-t-10">  
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="admin_tabs">
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane active">
+                        <div class="text-center">
+                          <p class="">
+                            <a href="https://mytutoring.freshdesk.com/support/solutions/articles/43000247998-how-to-edit-website-theme-" target="_blank">How to edit website theme?</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+</div>
+
